@@ -139,6 +139,9 @@ class BaseLLM(BaseLanguageModel, ABC):
                 self.callback_manager.on_llm_error(e, verbose=self.verbose)
                 raise e
             self.callback_manager.on_llm_end(output, verbose=self.verbose)
+            print("\n\n\n== Detail ==")
+            print(prompts[0])
+            print(output)
             return output
         params = self.dict()
         params["stop"] = stop

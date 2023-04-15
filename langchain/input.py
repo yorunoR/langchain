@@ -33,4 +33,4 @@ def print_text(text: str, color: Optional[str] = None, end: str = "") -> None:
         text_to_print = text
     else:
         text_to_print = get_colored_text(text, color)
-    print(text_to_print, end=end)
+    # print(text_to_print, end=end)

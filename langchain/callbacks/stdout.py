@@ -38,11 +38,11 @@ class StdOutCallbackHandler(BaseCallbackHandler):
     ) -> None:
         """Print out that we are entering a chain."""
         class_name = serialized["name"]
-        print(f"\n\n\033[1m> Entering new {class_name} chain...\033[0m")
+        # print(f"\n\n\033[1m> Entering new {class_name} chain...\033[0m")
 
     def on_chain_end(self, outputs: Dict[str, Any], **kwargs: Any) -> None:
         """Print out that we finished a chain."""
-        print("\n\033[1m> Finished chain.\033[0m")
+        # print("\n\033[1m> Finished chain.\033[0m")
 
     def on_chain_error(
         self, error: Union[Exception, KeyboardInterrupt], **kwargs: Any

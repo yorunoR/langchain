@@ -115,7 +115,10 @@ class LLMChain(Chain):
 
     def apply(self, input_list: List[Dict[str, Any]]) -> List[Dict[str, str]]:
         """Utilize the LLM generate method for speed gains."""
+        print("\n\n@@@@@@@@@@@@@@@@@ START")
+        print(input_list)
         response = self.generate(input_list)
+        print("\n^^^^^^^^^^^^^^^^^ END")
         return self.create_outputs(response)
 
     async def aapply(self, input_list: List[Dict[str, Any]]) -> List[Dict[str, str]]:
