@@ -284,7 +284,7 @@ class ChatLiteLLM(BaseChatModel):
             set_model_value = self.model_name
         return {
             "model": set_model_value,
-            "force_timeout": self.request_timeout,
+            "timeout": self.request_timeout,
             "max_tokens": self.max_tokens,
             "stream": self.streaming,
             "n": self.n,
@@ -318,7 +318,7 @@ class ChatLiteLLM(BaseChatModel):
         self.client.organization = self.organization
         creds: Dict[str, Any] = {
             "model": set_model_value,
-            "force_timeout": self.request_timeout,
+            "timeout": self.request_timeout,
             "api_base": self.api_base,
         }
         return {**self._default_params, **creds}
